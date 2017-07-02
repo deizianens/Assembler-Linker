@@ -1,0 +1,5 @@
+loadi R0 IO ;IO é o endereço 254 da memória principal
+loadi R1 IO ;Carregar de IO pede um valor ao usuário no console
+.extern MULTIPLICA
+storei R0 IO
+exit

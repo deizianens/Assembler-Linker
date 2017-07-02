@@ -1,0 +1,8 @@
+_mean:	add R1 R2
+		add R1 R3
+		loadi R7 tres
+		divide R1 R7
+		storei R1 IO
+		exit
+		
+tres:	.data 2 3

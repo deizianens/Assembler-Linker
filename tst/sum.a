@@ -1,0 +1,4 @@
+_sum: 	add R1 R2
+		add R1 R3
+		storei R1 IO
+		ret

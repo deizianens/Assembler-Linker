@@ -1,0 +1,38 @@
+;programa le 4 numeros OP, A, B, C
+;OP = operacao a ser realizada
+;Se OP = 1, o programa devera apresentar o maior dos 3 numeros
+;Se OP = 2, o programa exibira o menor dos 3
+;Se OP = 3, o programa exibira a soma dos 3
+;Se OP = 4, o programa exibira o produto dos 3
+;Se OP = 5, o programa exibira a media dos 3
+
+	loadi R0 IO 	;le OP
+	loadi R1 IO		;le A
+	loadi R2 IO		;le B
+	loadi R3 IO		;le C
+	loadc R4 1		;armazena a constante 1 no registrador
+	seq R5 R0 R4 	;verifica se OP = 1, caso seja, R5 sera 1
+	jmpp R5 _maior	;vai para maior caso R5 seja maior que 0 (=1)
+	loadc R4 2		;armazena a constante 2 no registrador
+	seq R5 R0 R4 	;verifica se OP = 2, caso seja, R5 sera 1
+	jmpp R5 _menor	;vai para maior caso R5 seja maior que 0 (=1)
+	loadc R4 3		;armazena a constante 3 no registrador
+	seq R5 R0 R4 	;verifica se OP = 3, caso seja, R5 sera 1
+	jmpp R5 _soma	;vai para maior caso R5 seja maior que 0 (=1)
+	loadc R4 4		;armazena a constante 4 no registrador
+	seq R5 R0 R4 	;verifica se OP = 4, caso seja, R5 sera 1
+	jmpp R5 _prod	;vai para maior caso R5 seja maior que 0 (=1)
+	loadc R4 5		;armazena a constante 5 no registrador
+	seq R5 R0 R4 	;verifica se OP = 2, caso seja, R5 sera 1
+	jmpp R5 _media	;vai para maior caso R5 seja maior que 0 (=1)
+_maior:	.extern _major
+	jump _fim
+_menor: .extern _minor
+	jump _fim
+_soma:	.extern _sum
+	jump _fim
+_prod: .extern _mult
+	jump _fim
+_media: .extern _mean
+_fim: exit
+

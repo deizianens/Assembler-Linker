@@ -1,0 +1,10 @@
+-loadc-R0-3-
+-storei-R0-140-
+-clear-R0--
+_mean-add-R1-R2-
+-add-R1-R3-
+-loadi-R7-140-
+-divide-R1-R7-
+-storei-R1-254-
+-exit---
+----

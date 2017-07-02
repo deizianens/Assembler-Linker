@@ -1,0 +1,12 @@
+_minor:		slt R4 R1 R2 	; escreve 0 em R4 caso R1 seja maior que R2 e 1 caso contrario
+			jmpp R4 _menor0	; se R4 for 1 pula pra maior0
+			slt R4 R3 R2 	; escreve 0 em R4 caso R3 seja maior que R2 e 1 caso contrario
+			jmpp R4 _menor1	; se R4 for 1 pula pra maior1
+			storei R2 IO
+			ret
+_menor0: 	slt R4 R3 R1 	; escreve 0 em R4 caso R1 seja maior que R3 e 1 caso contrario
+			jmpp R4 _menor1	; se R3 for 0 pula pra maior
+			storei R1 IO
+			ret			
+_menor1: 	storei R3 IO
+			ret

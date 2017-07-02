@@ -1,0 +1,6 @@
+-clear-R0--
+_sum-add-R1-R2-
+-add-R1-R3-
+-storei-R1-254-
+-loadRa-0--
+-ret---

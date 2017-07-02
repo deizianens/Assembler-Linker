@@ -1,0 +1,16 @@
+-clear-R0--
+_major-slt-R4-R1-R2
+-jmpz-R4-16-
+-slt-R4-R3-R2
+-jmpz-R4-26-
+-storei-R2-254-
+-loadRa-0--
+-ret---
+_maior0-slt-R4-R3-R1
+-jmpz-R4-26-
+-storei-R1-254-
+-loadRa-0--
+-ret---
+_maior1-storei-R3-254-
+-loadRa-0--
+-ret---
